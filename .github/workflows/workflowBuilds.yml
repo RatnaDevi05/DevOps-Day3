@@ -1,6 +1,5 @@
 name: workflowBuilds.yml
 
-# Trigger workflow on push or pull request
 on:
   push:
     branches: [ main ]
@@ -35,7 +34,7 @@ jobs:
 
       # Upload coverage report as artifact
       - name: Upload JaCoCo report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: jacoco-report
           path: target/site/jacoco
